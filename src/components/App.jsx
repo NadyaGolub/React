@@ -1,16 +1,12 @@
-export const App = () => {
+import Painting from "./Painting"
+import friends from "./friends.json";
+
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+<div>
+      <Painting image={friends[0].avatar} name={friends[0].name} activity={friends[0].isOnline} />
+ </div>
+  )
+
 };
